@@ -1,0 +1,38 @@
+{
+  "name": "make-it-possible",
+  "version": "1.0.0",
+  "description": "make it possible is an idea birth from necessity of people to achieve their goals especially in this pandemic times",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BernardoAguayoOrtega/make-it-possible.git"
+  },
+  "keywords": [
+    "react.js",
+    "js",
+    "jest",
+    "enzyme",
+    "webpack",
+    "prettier",
+    "husky",
+    "babel"
+  ],
+  "author": "Bernardo Aguayo Ortega",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BernardoAguayoOrtega/make-it-possible/issues"
+  },
+  "homepage": "https://github.com/BernardoAguayoOrtega/make-it-possible#readme",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
