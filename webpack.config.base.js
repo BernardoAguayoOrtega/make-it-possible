@@ -1,19 +1,19 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const babelRules ={
+const babelRules = {
   test: /\.(js|jsx)$/,
   loader: 'babel-loader',
-  exclude: /node_modules/
-}
+  exclude: /node_modules/,
+};
 
 module.exports = {
   entry: './src/index.jsx',
   module: {
-    rules: [babelRules]
+    rules: [babelRules],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html'
-    })
-  ]
-}
+      template: './public/index.html',
+    }),
+  ],
+};
