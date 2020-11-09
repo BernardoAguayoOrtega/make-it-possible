@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  'settings': {
+    'react': {
+      'version': '16.6.1'
+    }
+  },
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:jsx-a11y/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -12,7 +17,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', 'jsx-a11y'],
   rules: {
     'comma-style': [2, 'last'],
     complexity: 0,
