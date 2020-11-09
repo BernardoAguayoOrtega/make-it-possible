@@ -1,2 +1,2 @@
 # make-it-possible
-make it possible is an idea birth from necessity of people to achieve their goals especially in this pandemic times
+make it possible is an idea birth from necessity of people to achieve their goals especially in this pandemic times, so do you want to make it possible? 
