@@ -4,7 +4,12 @@
   "description": "make it possible is an idea birth from necessity of people to achieve their goals especially in this pandemic times",
   "main": "index.jsx",
   "scripts": {
-    "test": "jest"
+    "build": "webpack --config webpack.config.prod.js",
+    "dev": "webpack-dev-server --open",
+    "dev:hot": "npm run dev -- --hot",
+    "test": "jest",
+    "format": "pretty-quick",
+    "lint": "eslint ./"
   },
   "repository": {
     "type": "git",
@@ -31,6 +36,7 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.5.0",
     "webpack": "^5.4.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
