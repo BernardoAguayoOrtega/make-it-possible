@@ -6,8 +6,8 @@ const root = document.getElementById('root');
 
 // render the app
 render(
-	<>
-		<h1>I'm the app and I'm alive</h1>
-	</>,
-	root,
+  <React.StrictMode>
+    <h1>Hey</h1>
+  </React.StrictMode>,
+  root
 );

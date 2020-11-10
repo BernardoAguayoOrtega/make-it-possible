@@ -4,12 +4,16 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  'settings': {
-    'react': {
-      'version': '16.6.1'
-    }
+  settings: {
+    react: {
+      version: '16.6.1',
+    },
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:jsx-a11y/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -194,7 +198,7 @@ module.exports = {
     'react/jsx-pascal-case': 2,
     'react/jsx-sort-prop-types': 0,
     'react/jsx-sort-props': 0,
-    'react/jsx-uses-react': 2,
+    'react/jsx-uses-react': 0,
     'react/jsx-uses-vars': 2,
     'react/no-did-mount-set-state': 2,
     'react/no-did-update-set-state': 2,
@@ -204,7 +208,7 @@ module.exports = {
     'react/forbid-prop-types': 0,
     'react/prefer-stateless-function': 0,
     'react/require-default-props': 0,
-    'react/react-in-jsx-scope': 2,
+    'react/react-in-jsx-scope': 0,
     'react/self-closing-comp': 2,
     'react/sort-comp': 0,
     'react/jsx-wrap-multilines': 2,
