@@ -1,10 +1,5 @@
 // import styled components
-import {
-  HeaderContainer,
-  LeftSide,
-  RightSide,
-  theme,
-} from './styledComponents.js';
+import { HeaderContainer, LeftSide, RightSide } from './styledComponents.js';
 // import button
 import { Button, Typography } from '@material-ui/core';
 // import logo
