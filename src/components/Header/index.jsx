@@ -1,8 +1,13 @@
 // import styled components
-import { HeaderContainer } from './styledComponents.js';
+import { HeaderContainer, LeftSide, RightSide } from './styledComponents.js';
 
 // header component
-const Header = () => <HeaderContainer>Hey</HeaderContainer>;
+const Header = () => (
+  <HeaderContainer>
+    <LeftSide>something</LeftSide>
+    <RightSide>Other thing</RightSide>
+  </HeaderContainer>
+);
 
 // export default
 export default Header;
