@@ -2,12 +2,14 @@
 import { HeaderContainer, LeftSide, RightSide } from './styledComponents.js';
 // import button
 import { Button, Typography } from '@material-ui/core';
+// import logo
+import Logo from '../Logo/index.jsx';
 
 // header component
 const Header = () => (
   <HeaderContainer>
     <LeftSide>
-      <Typography>Logo</Typography>
+      <Logo />
       <Typography variant="caption">Blog</Typography>
     </LeftSide>
     <RightSide>

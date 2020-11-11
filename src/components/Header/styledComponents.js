@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   height: 20vh;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem;
 `;
 
 // header left side
