@@ -6,10 +6,15 @@ const babelRules = {
   exclude: /node_modules/,
 };
 
+const styleLoaders = {
+  test: /\.css$/i,
+  use: ['style-loader', 'css-loader'],
+};
+
 module.exports = {
   entry: './src/index.jsx',
   module: {
-    rules: [babelRules],
+    rules: [babelRules, styleLoaders],
   },
   plugins: [
     new HtmlWebpackPlugin({
