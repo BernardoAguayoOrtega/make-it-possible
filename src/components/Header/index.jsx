@@ -1,5 +1,10 @@
 // import styled components
-import { HeaderContainer, LeftSide, RightSide } from './styledComponents.js';
+import {
+  HeaderContainer,
+  LeftSide,
+  RightSide,
+  theme,
+} from './styledComponents.js';
 // import button
 import { Button, Typography } from '@material-ui/core';
 // import logo
@@ -10,11 +15,17 @@ const Header = () => (
   <HeaderContainer>
     <LeftSide>
       <Logo />
-      <Typography variant="caption">Blog</Typography>
+      <Typography style={{ color: 'whitesmoke' }} variant="caption">
+        Blog
+      </Typography>
     </LeftSide>
     <RightSide>
-      <Button style={{ color: 'white' }}>Sign Up</Button>
-      <Button style={{ color: 'white' }}>Sign In</Button>
+      <Button size="large" style={{ color: 'white' }}>
+        Sign Up
+      </Button>
+      <Button size="large" style={{ color: 'white' }}>
+        Sign In
+      </Button>
     </RightSide>
   </HeaderContainer>
 );

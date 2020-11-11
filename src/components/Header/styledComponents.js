@@ -8,14 +8,30 @@ export const HeaderContainer = styled.header`
   height: 20vh;
   justify-content: space-between;
   padding: 1.5rem;
+
+  @media (max-width: 450px) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 // header left side
 export const LeftSide = styled.div`
-  background-color: lightcyan;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 // header right side
 export const RightSide = styled.div`
-  background-color: lightcoral;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 `;
