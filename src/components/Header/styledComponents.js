@@ -5,8 +5,9 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   background-color: black;
   display: flex;
-  justify-content: space-between;
   height: 20vh;
+  justify-content: space-between;
+  padding: 1rem;
 `;
 
 // header left side
