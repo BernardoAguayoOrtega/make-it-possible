@@ -1,19 +1,12 @@
-import Button from '@material-ui/core/Button';
+// import header component
+import Header from '../Header/index.jsx';
 
-import styled from 'styled-components';
-
-const Black = styled.button`
-  color: blue;
-`;
-
+// app component
 const App = () => {
   return (
     <>
+      <Header />
       <h1>I&apos;m the app</h1>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
-      <Black>Hey</Black>
     </>
   );
 };
