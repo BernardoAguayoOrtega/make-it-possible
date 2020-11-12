@@ -1,5 +1,7 @@
+// import material ui carousel
 import Carousel from 'react-material-ui-carousel';
-import { Paper } from '@material-ui/core';
+// import Carousel Item
+import CarouselItem from '../CarouselItem/index.jsx';
 
 export default function Example(props) {
   const items = [
@@ -11,24 +13,17 @@ export default function Example(props) {
       name: 'Random Name #2',
       description: 'Hello World!',
     },
+    {
+      name: 'Random Name #3',
+      description: 'Hello my love <3!',
+    },
   ];
 
   return (
-    <Carousel>
+    <Carousel autoPlay={true}>
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}
     </Carousel>
-  );
-}
-
-function Item(props) {
-  return (
-    <Paper>
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
-
-      <button className="CheckButton">Check it out!</button>
-    </Paper>
   );
 }
