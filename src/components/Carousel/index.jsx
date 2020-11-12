@@ -1,9 +1,9 @@
-// import material ui carousel
-import Carousel from 'react-material-ui-carousel';
+// import material ui carousel carousel as C
+import C from 'react-material-ui-carousel';
 // import Carousel Item
 import CarouselItem from '../CarouselItem/index.jsx';
 
-export default function Example(props) {
+const Carousel = (props) => {
   const items = [
     {
       name: 'Random Name #1',
@@ -26,7 +26,7 @@ export default function Example(props) {
   ];
 
   return (
-    <Carousel className="carousel" autoPlay={true} fullHeightHover={true}>
+    <C className="carousel" autoPlay={true} fullHeightHover={true}>
       {items.map((item, i) => (
         <CarouselItem
           key={i}
@@ -35,6 +35,9 @@ export default function Example(props) {
           image={item?.image}
         />
       ))}
-    </Carousel>
+    </C>
   );
-}
+};
+
+// export default
+export default Carousel;
