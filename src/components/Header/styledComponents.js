@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   background-color: black;
   display: flex;
-  height: 20vh;
+  height: 15vh;
   justify-content: space-between;
   padding: 1.5rem;
 
