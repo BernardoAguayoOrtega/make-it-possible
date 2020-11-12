@@ -7,6 +7,10 @@ export const CarouselItemContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  height: 70vh;
   width: 100%;
+
+  @media (max-width: 450px) {
+    height: 60vh;
+  }
 `;

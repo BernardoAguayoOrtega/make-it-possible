@@ -5,13 +5,14 @@ import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   background-color: black;
   display: flex;
-  height: 15vh;
+  height: 10vh;
   justify-content: space-between;
   padding: 1.5rem;
 
   @media (max-width: 450px) {
     align-items: center;
     flex-direction: column;
+    height: 20vh;
     justify-content: center;
   }
 `;
