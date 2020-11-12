@@ -22,7 +22,11 @@ export default function Example(props) {
   return (
     <Carousel autoPlay={true}>
       {items.map((item, i) => (
-        <Item key={i} item={item} />
+        <CarouselItem
+          key={i}
+          name={item?.name}
+          description={item?.description}
+        />
       ))}
     </Carousel>
   );

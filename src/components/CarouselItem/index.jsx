@@ -2,11 +2,11 @@
 import { Paper } from '@material-ui/core';
 
 // item component
-const CarouselItem = (props) => {
+const CarouselItem = ({ name, description }) => {
   return (
     <Paper>
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
+      <h2>{name}</h2>
+      <p>{description}</p>
 
       <button className="CheckButton">Check it out!</button>
     </Paper>
