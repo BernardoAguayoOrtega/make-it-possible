@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root';
 // import home
 import Home from '../../pages/Home/index.jsx';
 
@@ -10,4 +11,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default hot(App);

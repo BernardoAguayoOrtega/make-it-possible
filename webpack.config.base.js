@@ -12,7 +12,7 @@ const styleLoaders = {
 };
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: ['react-hot-loader/patch', './src/index.jsx'],
   module: {
     rules: [babelRules, styleLoaders],
   },
