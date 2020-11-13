@@ -27,6 +27,13 @@ const Features = () => {
       image:
         'https://images.unsplash.com/photo-1541079033018-63489731598f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=1000',
     },
+    {
+      title: 'Random Name #4',
+      subTitle: 'yeah',
+      content: 'Hello my love <3!',
+      image:
+        'https://images.unsplash.com/photo-1605087208323-541e578c84c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=1000',
+    },
   ];
 
   return (

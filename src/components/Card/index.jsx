@@ -11,11 +11,18 @@ import {
 
 const useStyles = makeStyles(() => ({
   root: {
-    maxWidth: 345,
+    maxWidth: '35vw',
+    minWidth: '35vw',
+    margin: '1rem auto',
+    background: 'black',
+    color: 'white',
   },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
+  },
+  content: {
+    color: 'white',
   },
 }));
 
@@ -24,10 +31,10 @@ export default function example({ title, subTitle, content, image }) {
 
   return (
     <Card className={classes.root}>
-      <CardHeader title={title} subheader={subTitle} />
+      <CardHeader title={title} />
       <CardMedia className={classes.media} image={image} title={title} />
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+      <CardContent className={classes.content}>
+        <Typography variant="body2" component="p">
           {content}
         </Typography>
       </CardContent>
