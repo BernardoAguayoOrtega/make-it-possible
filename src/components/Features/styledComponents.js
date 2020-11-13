@@ -9,4 +9,8 @@ export const FeaturesContainer = styled.div`
   justify-content: center;
   margin-top: 1rem;
   grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;

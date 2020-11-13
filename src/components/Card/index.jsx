@@ -2,21 +2,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 // import material ui
 import {
-  Card,
   CardHeader,
   CardMedia,
   CardContent,
   Typography,
 } from '@material-ui/core/';
+// import styled components
+import { CardContainer } from './styledComponents';
 
 const useStyles = makeStyles(() => ({
-  root: {
-    maxWidth: '35vw',
-    minWidth: '35vw',
-    margin: '1rem auto',
-    background: 'black',
-    color: 'white',
-  },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
@@ -30,7 +24,7 @@ export default function example({ title, subTitle, content, image }) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <CardContainer>
       <CardHeader title={title} />
       <CardMedia className={classes.media} image={image} title={title} />
       <CardContent className={classes.content}>
@@ -38,6 +32,6 @@ export default function example({ title, subTitle, content, image }) {
           {content}
         </Typography>
       </CardContent>
-    </Card>
+    </CardContainer>
   );
 }
