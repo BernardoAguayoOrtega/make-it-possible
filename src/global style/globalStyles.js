@@ -7,6 +7,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Roboto', sans-serif;
   }
+  body::-webkit-scrollbar {
+  width: 1px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
 `;
 
 export default GlobalStyle;
