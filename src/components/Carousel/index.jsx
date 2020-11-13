@@ -2,6 +2,8 @@
 import C from 'react-material-ui-carousel';
 // import Carousel Item
 import CarouselItem from '../CarouselItem/index.jsx';
+// import styled components
+import { CarouselContainer } from './styledComponents';
 
 const Carousel = (props) => {
   const items = [
@@ -26,16 +28,18 @@ const Carousel = (props) => {
   ];
 
   return (
-    <C className="carousel" autoPlay={true} fullHeightHover={true}>
-      {items.map((item, i) => (
-        <CarouselItem
-          key={i}
-          name={item?.name}
-          description={item?.description}
-          image={item?.image}
-        />
-      ))}
-    </C>
+    <CarouselContainer>
+      <C className="carousel" autoPlay={true} fullHeightHover={true}>
+        {items.map((item, i) => (
+          <CarouselItem
+            key={i}
+            name={item?.name}
+            description={item?.description}
+            image={item?.image}
+          />
+        ))}
+      </C>
+    </CarouselContainer>
   );
 };
 
