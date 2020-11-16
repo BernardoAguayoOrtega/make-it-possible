@@ -1,22 +1,26 @@
-// footer component
+/**
+ * Footer component, shows general info to user like about, privacy policy, etc
+ */
+import Logo from '../../components/Logo/index.jsx';
+
 const Footer = () => (
   <footer className="footer">
     <Logo aria-label="logo" aria-required="true" className="footer__logo" />
     <div className="footer__subtitle">
-      <Link className="about-link" to="/about">
+      <a className="about-link" href="/about">
         <h2>About</h2>
-      </Link>
-      <Link className="policy-link" to="/Privacy_Policy">
+      </a>
+      <a className="policy-link" href="/Privacy_Policy">
         <h2>Privacy Policy</h2>
-      </Link>
-      <Link className="team-link" to="/team">
+      </a>
+      <a className="team-link" href="/team">
         <h2>Team</h2>
-      </Link>
+      </a>
     </div>
     <p aria-label="rights" aria-required="true" className="footer__comments">
-      2020 by Masters INC. Proudly created with React JS
+      2020 by Bernado Aguayo and Alvaro Masias
     </p>
   </footer>
 );
-// export default
+
 export default Footer;
