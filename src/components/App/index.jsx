@@ -1,8 +1,9 @@
+/**
+ * This is the app component => the root component <3
+ */
 import { hot } from 'react-hot-loader/root';
-// import home
 import Home from '../../pages/Home/index.jsx';
 
-// app component
 const App = () => {
   return (
     <>
