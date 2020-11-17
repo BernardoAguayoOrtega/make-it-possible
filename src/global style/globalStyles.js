@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
 body::-webkit-scrollbar-track {
   background: white;        /* color of the tracking area */
 }
+
+body{
+  padding: 0 !important;
+}
 `;
 
 export default GlobalStyle;
