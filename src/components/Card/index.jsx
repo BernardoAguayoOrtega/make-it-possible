@@ -1,13 +1,13 @@
-// make styles from material
+/**
+ * this card component show user info in a very elegant way
+ */
 import { makeStyles } from '@material-ui/core/styles';
-// import material ui
 import {
   CardHeader,
   CardMedia,
   CardContent,
   Typography,
 } from '@material-ui/core/';
-// import styled components
 import { CardContainer } from './styledComponents';
 
 const useStyles = makeStyles(() => ({

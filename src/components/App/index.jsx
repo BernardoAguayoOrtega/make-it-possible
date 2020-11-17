@@ -1,5 +1,5 @@
 /**
- * This is the app component => the root component <3
+ * This is the app component => the root component, the core of the app
  */
 import { hot } from 'react-hot-loader/root';
 import Home from '../../pages/Home/index.jsx';

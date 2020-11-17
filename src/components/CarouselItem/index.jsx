@@ -1,7 +1,8 @@
-// import styled components
+/**
+ * carousel item component, show an elegant carouser to user, the user can see the features
+ */
 import { CarouselItemContainer } from './styledComponents.js';
 
-// item component
 const CarouselItem = ({ name, description, image }) => {
   return (
     <CarouselItemContainer background={image}>

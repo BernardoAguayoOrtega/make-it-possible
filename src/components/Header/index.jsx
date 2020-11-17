@@ -1,11 +1,10 @@
-// import styled components
+/**
+ * Header component, show user login/sign, logo and enter to blog
+ */
 import { HeaderContainer, LeftSide, RightSide } from './styledComponents.js';
-// import button
 import { Button, Typography } from '@material-ui/core';
-// import logo
 import Logo from '../Logo/index.jsx';
 
-// header component
 const Header = () => (
   <HeaderContainer>
     <LeftSide>
@@ -25,5 +24,4 @@ const Header = () => (
   </HeaderContainer>
 );
 
-// export default
 export default Header;

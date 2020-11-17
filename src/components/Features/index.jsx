@@ -1,9 +1,9 @@
-// import styled components
+/**
+ * Features component, Show user the new features
+ */
 import { FeaturesContainer } from './styledComponents';
-// import card component
 import Card from '../Card/index.jsx';
 
-// features component
 const Features = () => {
   const features = [
     {

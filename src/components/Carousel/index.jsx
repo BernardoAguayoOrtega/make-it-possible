@@ -1,8 +1,8 @@
-// import material ui carousel carousel as C
+/**
+ * carousel component, show an elegant carouser to user, the user can see the features
+ */
 import C from 'react-material-ui-carousel';
-// import Carousel Item
 import CarouselItem from '../CarouselItem/index.jsx';
-// import styled components
 import { CarouselContainer } from './styledComponents';
 
 const Carousel = (props) => {

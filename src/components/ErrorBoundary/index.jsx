@@ -1,4 +1,6 @@
-// import prop-types
+/**
+ * Error boundary component, to handle app errors
+ */
 import PropTypes from 'prop-types';
 
 export default class ErrorBoundary extends React.Component {

@@ -1,3 +1,6 @@
+/**
+ * Application Logo
+ */
 function Logo(props) {
   return (
     <svg
