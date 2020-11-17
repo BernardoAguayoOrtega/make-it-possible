@@ -3,12 +3,13 @@
  */
 import { hot } from 'react-hot-loader/root';
 import Home from '../../pages/Home/index.jsx';
+import Layout from '../Layout/index.jsx';
 
 const App = () => {
   return (
-    <>
+    <Layout>
       <Home />
-    </>
+    </Layout>
   );
 };
 
