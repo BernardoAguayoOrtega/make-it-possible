@@ -14,6 +14,7 @@ import Modal from '../Modal/index.jsx';
 
 const Header = () => {
   const [open, setOpen] = React.useState(false);
+  const [option, setOption] = React.useState(0);
 
   return (
     <HeaderContainer>
@@ -25,14 +26,20 @@ const Header = () => {
       </LeftSide>
       <RightSide>
         <Button
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            setOpen(true);
+            setOption(true);
+          }}
           size="large"
           style={{ color: 'white' }}
         >
           Sign Up
         </Button>
         <Button
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            setOpen(true);
+            setOption(false);
+          }}
           size="large"
           style={{ color: 'white' }}
         >
@@ -40,7 +47,7 @@ const Header = () => {
         </Button>
       </RightSide>
       <ModalContainer>
-        <Modal open={open} setOpen={setOpen} />
+        <Modal open={open} setOpen={setOpen} option={option} />
       </ModalContainer>
     </HeaderContainer>
   );

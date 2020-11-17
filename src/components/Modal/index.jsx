@@ -1,3 +1,6 @@
+/**
+ * Modal component to handle login and logout
+ */
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -17,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LayoutModal = ({ open, setOpen }) => {
+const LayoutModal = ({ open, setOpen, option }) => {
   const classes = useStyles();
 
   const handleClose = () => {
@@ -40,10 +43,7 @@ const LayoutModal = ({ open, setOpen }) => {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Transition modal</h2>
-            <p id="transition-modal-description">
-              react-transition-group animates me.
-            </p>
+            {option ? <div>Sign Up</div> : <div>Sign in</div>}
           </div>
         </Fade>
       </Modal>
