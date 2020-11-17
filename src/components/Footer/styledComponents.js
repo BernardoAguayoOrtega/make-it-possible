@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
 export const LogoContainer = styled.div`
   grid-area: a;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
 `;
 
 export const FooterInfo = styled.div`
@@ -36,6 +36,13 @@ export const FooterInfo = styled.div`
       padding: 1rem;
     }
   }
+
+  @media (max-width: 319px) {
+    flex-direction: column;
+    h2 {
+      padding: 1rem 0;
+    }
+  }
 `;
 
 export const Copyright = styled.div`
@@ -46,5 +53,9 @@ export const Copyright = styled.div`
 
   @media (max-width: 450px) {
     text-align: center;
+  }
+
+  @media (max-width: 319px) {
+    padding: 2rem 0;
   }
 `;
