@@ -1,20 +1,26 @@
-// import render method
 import { render } from 'react-dom';
-// import babel polyfill <3
 import '@babel/polyfill';
-// import app component
 import App from './components/App/index.jsx';
-// import global styles import
 import GlobalStyle from './global style/globalStyles';
+import { Provider } from 'react-redux';
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { configureStore } from './utils/store';
 
-// create root const
 const root = document.getElementById('root');
 
-// render the app
+const store = configureStore();
+
+const persistor = persistStore(store);
+
 render(
-  <>
-    <App />
-    <GlobalStyle />
-  </>,
+  <Provider store={store}>
+    <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+      <>
+        <App />
+        <GlobalStyle />
+      </>
+    </PersistGate>
+  </Provider>,
   root
 );
