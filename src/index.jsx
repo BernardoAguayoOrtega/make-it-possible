@@ -5,7 +5,7 @@ import GlobalStyle from './global style/globalStyles';
 import { Provider } from 'react-redux';
 import { persistStore } from 'redux-persist';
 import { PersistGate } from 'redux-persist/lib/integration/react';
-import { configureStore } from './utils/store';
+import { configureStore } from './utils/redux/store';
 
 const root = document.getElementById('root');
 
