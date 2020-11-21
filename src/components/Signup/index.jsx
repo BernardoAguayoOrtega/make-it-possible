@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { signup } from '../../utils/firebase/auth';
 import { useState } from 'react';
 import { Form, Input } from './styledComponents';
+import { Button } from '@material-ui/core';
 
 const SignUp = ({ setOpen }) => {
   const { register, handleSubmit, reset } = useForm();
@@ -11,10 +12,10 @@ const SignUp = ({ setOpen }) => {
     let newUser;
     setLoading(true);
     try {
-      newUser = await signup(data);
-      reset();
       setLoading(false);
       setOpen(false);
+      newUser = await signup(data);
+      reset();
     } catch (error) {
       console.log(error);
     }
@@ -41,7 +42,9 @@ const SignUp = ({ setOpen }) => {
         placeholder="Password"
         ref={register}
       />
-      <button type="submit">Sign Up</button>
+      <Button type="submit" variant="outlined">
+        Sign Up
+      </Button>
     </Form>
   );
 };
