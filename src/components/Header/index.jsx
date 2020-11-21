@@ -14,7 +14,7 @@ import Modal from '../Modal/index.jsx';
 
 const Header = () => {
   const [open, setOpen] = React.useState(false);
-  const [option, setOption] = React.useState(0);
+  const [option, setOption] = React.useState(false);
 
   return (
     <HeaderContainer>

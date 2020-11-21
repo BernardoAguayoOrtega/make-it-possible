@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import Signup from '../Signup/index.jsx';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -43,7 +44,7 @@ const LayoutModal = ({ open, setOpen, option }) => {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            {option ? <div>Sign Up</div> : <div>Sign in</div>}
+            {option ? <Signup setOpen={setOpen} /> : <div>Sign in</div>}
           </div>
         </Fade>
       </Modal>

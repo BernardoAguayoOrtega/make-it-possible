@@ -26,7 +26,7 @@ const Footer = () => (
       </a>
     </FooterInfo>
     <Copyright aria-label="rights" aria-required="true">
-      <p>2020 by Bernado Aguayo and Alvaro Masias</p>
+      <p>Copyright © 2020 Make it possible</p>
     </Copyright>
   </FooterContainer>
 );
