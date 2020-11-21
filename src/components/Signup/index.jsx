@@ -7,16 +7,16 @@ import Loading from '../Loading/index.jsx';
 
 const SignUp = ({ setOpen }) => {
   const { register, handleSubmit, reset } = useForm();
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
     let newUser;
     setLoading(true);
     try {
-      setLoading(false);
-      setOpen(false);
       newUser = await signup(data);
       reset();
+      setLoading(false);
+      setOpen(false);
     } catch (error) {
       console.log(error);
     }
@@ -25,7 +25,7 @@ const SignUp = ({ setOpen }) => {
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       {isLoading ? (
-        <Loading />
+        <Loading type="bars" color="black" />
       ) : (
         <>
           <Input

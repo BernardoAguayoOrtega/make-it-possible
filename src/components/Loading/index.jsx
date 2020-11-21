@@ -5,7 +5,7 @@
 import ReactLoading from 'react-loading';
 
 const Loading = ({ type, color }) => (
-  <ReactLoading type={type} color={color} height={667} width={375} />
+  <ReactLoading type={type} color={color} height={200} width={200} />
 );
 
 export default Loading;
