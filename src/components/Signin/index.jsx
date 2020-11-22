@@ -4,16 +4,18 @@ import { Button } from '@material-ui/core';
 import Loading from '../Loading/index.jsx';
 import { connect } from 'react-redux';
 import { userLogin } from '../../utils/redux/thunks';
+import { useState } from 'react';
 
-const Signin = ({ setOpen, getUser, isLoading }) => {
+const Signin = ({ setOpen, getUser }) => {
   const { register, handleSubmit, reset } = useForm();
-
-  console.log(isLoading);
+  const [isLoading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
+    setLoading(true);
     let newUser;
     try {
-      newUser = getUser(data);
+      newUser = await getUser(data);
+      setLoading(false);
       reset();
       await setOpen(false);
     } catch (error) {
@@ -47,8 +49,4 @@ const mapDispatchToProps = (dispatch) => ({
   getUser: (data) => dispatch(userLogin(data)),
 });
 
-const mapStateToProps = (state) => ({
-  isLoading: state.User.isLoading,
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Signin);
+export default connect(null, mapDispatchToProps)(Signin);
