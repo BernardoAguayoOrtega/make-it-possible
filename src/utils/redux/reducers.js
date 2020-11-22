@@ -1,6 +1,6 @@
 import { GET_USER } from './actions';
 
-const initialState = { isLoading: false, user: null };
+const initialState = { user: null };
 
 export const User = (state = initialState, action) => {
   const { type, payload } = action;
