@@ -11,13 +11,13 @@ const SignUp = ({ setOpen, getUser }) => {
   const [isLoading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
-    let newUser;
     setLoading(true);
+    let newUser;
     try {
-      newUser = getUser(data);
-      reset();
+      newUser = await getUser(data);
       setLoading(false);
-      setOpen(false);
+      reset();
+      await setOpen(false);
     } catch (error) {
       console.log(error);
     }
