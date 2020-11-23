@@ -19,8 +19,6 @@ const Header = ({ user, onPressUserLogout }) => {
   const [open, setOpen] = React.useState(false);
   const [option, setOption] = React.useState(false);
 
-  console.log(user);
-
   return (
     <HeaderContainer>
       <LeftSide>

@@ -1,3 +1,6 @@
+/**
+ * thunks to handle side effects inside our components
+ */
 import { signup, login, logout } from '../firebase/auth';
 import { getUser, userLogoutFromApp } from './actions';
 

@@ -1,3 +1,6 @@
+/**
+ * redux reducer
+ */
 import { GET_USER, USER_LOGOUT_FROM_APP } from './actions';
 
 const initialState = { user: null };
