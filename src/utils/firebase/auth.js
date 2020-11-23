@@ -20,3 +20,5 @@ export const login = async ({ email, password }) => {
 
   return resp.user;
 };
+
+export const logout = () => firebase.auth().signOut();

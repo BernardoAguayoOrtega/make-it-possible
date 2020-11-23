@@ -11,10 +11,14 @@ import {
 import { Button, Typography } from '@material-ui/core';
 import Logo from '../Logo/index.jsx';
 import Modal from '../Modal/index.jsx';
+import { connect } from 'react-redux';
+import { getUser } from '../../utils/redux/selectors';
 
-const Header = () => {
+const Header = ({ user }) => {
   const [open, setOpen] = React.useState(false);
   const [option, setOption] = React.useState(false);
+
+  console.log(user);
 
   return (
     <HeaderContainer>
@@ -25,26 +29,34 @@ const Header = () => {
         </Typography>
       </LeftSide>
       <RightSide>
-        <Button
-          onClick={() => {
-            setOpen(true);
-            setOption(true);
-          }}
-          size="large"
-          style={{ color: 'white' }}
-        >
-          Sign Up
-        </Button>
-        <Button
-          onClick={() => {
-            setOpen(true);
-            setOption(false);
-          }}
-          size="large"
-          style={{ color: 'white' }}
-        >
-          Sign In
-        </Button>
+        {user ? (
+          <Button size="large" style={{ color: 'white' }}>
+            Logout
+          </Button>
+        ) : (
+          <Button>
+            <Button
+              onClick={() => {
+                setOpen(true);
+                setOption(true);
+              }}
+              size="large"
+              style={{ color: 'white' }}
+            >
+              Sign Up
+            </Button>
+            <Button
+              onClick={() => {
+                setOpen(true);
+                setOption(false);
+              }}
+              size="large"
+              style={{ color: 'white' }}
+            >
+              Sign In
+            </Button>
+          </Button>
+        )}
       </RightSide>
       <ModalContainer>
         <Modal open={open} setOpen={setOpen} option={option} />
@@ -53,4 +65,8 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({
+  user: getUser(state),
+});
+
+export default connect(mapStateToProps)(Header);
