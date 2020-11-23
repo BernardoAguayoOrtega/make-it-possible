@@ -13,8 +13,9 @@ import Logo from '../Logo/index.jsx';
 import Modal from '../Modal/index.jsx';
 import { connect } from 'react-redux';
 import { getUser } from '../../utils/redux/selectors';
+import { userLogout } from '../../utils/redux/thunks';
 
-const Header = ({ user }) => {
+const Header = ({ user, onPressUserLogout }) => {
   const [open, setOpen] = React.useState(false);
   const [option, setOption] = React.useState(false);
 
@@ -30,7 +31,11 @@ const Header = ({ user }) => {
       </LeftSide>
       <RightSide>
         {user ? (
-          <Button size="large" style={{ color: 'white' }}>
+          <Button
+            size="large"
+            style={{ color: 'white' }}
+            onClick={() => onPressUserLogout()}
+          >
             Logout
           </Button>
         ) : (
@@ -69,4 +74,8 @@ const mapStateToProps = (state) => ({
   user: getUser(state),
 });
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = (dispatch) => ({
+  onPressUserLogout: () => dispatch(userLogout()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

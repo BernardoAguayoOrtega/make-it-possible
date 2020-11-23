@@ -25,7 +25,7 @@ export const userLogout = () => async (dispatch) => {
   try {
     const user = await logout();
 
-    console.log(user);
+    await dispatch(getUser(user));
   } catch (error) {
     alert(error);
   }
