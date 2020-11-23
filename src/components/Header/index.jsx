@@ -29,13 +29,15 @@ const Header = ({ user, onPressUserLogout }) => {
       </LeftSide>
       <RightSide>
         {user ? (
-          <Button
-            size="large"
-            style={{ color: 'white' }}
-            onClick={() => onPressUserLogout()}
-          >
-            Logout
-          </Button>
+          <>
+            <Button
+              size="large"
+              style={{ color: 'white' }}
+              onClick={() => onPressUserLogout()}
+            >
+              Logout
+            </Button>
+          </>
         ) : (
           <Button>
             <Button
