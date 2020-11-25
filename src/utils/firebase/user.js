@@ -1,3 +1,6 @@
+/**
+ * logic to create new users documents inside firestore
+ */
 import { firestore } from './firebase';
 
 export const createUserDocument = async (user) => {
