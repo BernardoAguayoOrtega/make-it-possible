@@ -26,7 +26,7 @@ const Footer = () => (
       </a>
     </FooterInfo>
     <Copyright aria-label="rights" aria-required="true">
-      <p>Copyright © 2020 Make it possible</p>
+      <p>Copyright © {new Date().getFullYear()} Make it possible</p>
     </Copyright>
   </FooterContainer>
 );
