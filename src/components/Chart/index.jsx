@@ -7,11 +7,11 @@ export default function Chart() {
       {
         label: 'Series 1',
         data: [
-          [0, 1],
-          [1, 2],
-          [2, 4],
+          [0, 5],
+          [1, 8],
+          [2, 10],
           [3, 2],
-          [4, 7],
+          [4, 10],
         ],
       },
       {
