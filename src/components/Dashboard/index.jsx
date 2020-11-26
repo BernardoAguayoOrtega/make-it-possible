@@ -1,10 +1,10 @@
 /**
  * user dashboard to handle our goals
  */
-import Chart from '../Chart/index.jsx';
+import GoalList from '../GoalsList/index.jsx';
 
 const Dashboard = () => {
-  return <Chart />;
+  return <GoalList />;
 };
 
 export default Dashboard;
