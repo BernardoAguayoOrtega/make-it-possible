@@ -7,15 +7,10 @@ const babelRules = {
   exclude: /node_modules/,
 };
 
-const styleLoaders = {
-  test: /\.css$/i,
-  use: ['style-loader', 'css-loader'],
-};
-
 module.exports = {
   entry: ['react-hot-loader/patch', './src/index.jsx'],
   module: {
-    rules: [babelRules, styleLoaders],
+    rules: [babelRules],
   },
   plugins: [
     new HtmlWebpackPlugin({
