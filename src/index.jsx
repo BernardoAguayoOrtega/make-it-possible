@@ -18,7 +18,7 @@ const store = configureStore();
 const persistor = persistStore(store);
 
 render(
-  <Router>
+  <Router basename="/">
     <Provider store={store}>
       <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
         <App />

@@ -5,11 +5,14 @@ import { hot } from 'react-hot-loader/root';
 import Home from '../../pages/Home/index.jsx';
 import Layout from '../Layout/index.jsx';
 import '../../utils/firebase/firebase';
+import { Switch, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <Layout>
-      <Home />
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
     </Layout>
   );
 };
