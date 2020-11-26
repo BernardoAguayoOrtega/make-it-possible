@@ -3,6 +3,8 @@
  */
 import Chart from '../Chart/index.jsx';
 
-export function Dashboard() {
+const Dashboard = () => {
   return <Chart />;
-}
+};
+
+export default Dashboard;

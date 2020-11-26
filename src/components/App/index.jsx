@@ -6,12 +6,14 @@ import Home from '../../pages/Home/index.jsx';
 import Layout from '../Layout/index.jsx';
 import '../../utils/firebase/firebase';
 import { Switch, Route } from 'react-router-dom';
+import Dashboard from '../Dashboard/index.jsx';
 
 const App = () => {
   return (
     <Layout>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/dash" component={Dashboard} />
       </Switch>
     </Layout>
   );
