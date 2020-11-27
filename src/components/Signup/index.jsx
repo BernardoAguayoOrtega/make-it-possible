@@ -4,7 +4,7 @@ import { Form, Input } from './styledComponents';
 import { Button } from '@material-ui/core';
 import Loading from '../Loading/index.jsx';
 import { connect } from 'react-redux';
-import { getUserFromDataBase } from '../../utils/redux/thunks';
+import { setUserFromDataBase } from '../../utils/redux/thunks';
 
 const SignUp = ({ setOpen, getUser }) => {
   const { register, handleSubmit, reset } = useForm();
@@ -58,7 +58,7 @@ const SignUp = ({ setOpen, getUser }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  getUser: (data) => dispatch(getUserFromDataBase(data)),
+  getUser: (data) => dispatch(setUserFromDataBase(data)),
 });
 
 export default connect(null, mapDispatchToProps)(SignUp);

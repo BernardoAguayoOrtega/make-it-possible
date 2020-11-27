@@ -4,7 +4,7 @@
 import { signup, login, logout } from '../firebase/auth';
 import { getUser, userLogoutFromApp } from './actions';
 
-export const getUserFromDataBase = (data) => async (dispatch) => {
+export const setUserFromDataBase = (data) => async (dispatch) => {
   try {
     const user = await signup(data);
 

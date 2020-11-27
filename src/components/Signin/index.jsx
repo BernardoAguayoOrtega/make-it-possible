@@ -12,9 +12,9 @@ const Signin = ({ setOpen, getUser }) => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    let newUser;
+
     try {
-      newUser = await getUser(data);
+      await getUser(data);
       setLoading(false);
       reset();
       await setOpen(false);
