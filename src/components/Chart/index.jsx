@@ -45,7 +45,7 @@ export default function Chart() {
         width: '200px',
       }}
     >
-      <C data={data} axes={axes} />
+      <C data={data} axes={axes} tooltip />
     </div>
   );
 }
