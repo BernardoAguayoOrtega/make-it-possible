@@ -1,7 +1,7 @@
 /**
  * Header component, show user login/sign, logo and enter to blog
  */
-import React from 'react';
+import { useState } from 'react';
 import {
   HeaderContainer,
   LeftSide,
@@ -11,14 +11,16 @@ import {
 import { Button, Typography } from '@material-ui/core';
 import Logo from '../Logo/index.jsx';
 import Modal from '../Modal/index.jsx';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUser } from '../../utils/redux/selectors';
 import { userLogout } from '../../utils/redux/thunks';
 
 const Header = ({ user, onPressUserLogout }) => {
-  const [open, setOpen] = React.useState(false);
-  const [option, setOption] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [option, setOption] = useState(false);
+  const { pathname } = useLocation();
+  const history = useHistory();
 
   return (
     <HeaderContainer>
@@ -32,13 +34,24 @@ const Header = ({ user, onPressUserLogout }) => {
       </LeftSide>
       <RightSide>
         {user ? (
-          <Button
-            size="large"
-            style={{ color: 'white' }}
-            onClick={() => onPressUserLogout()}
-          >
-            Logout
-          </Button>
+          <>
+            {pathname !== `/dash/${user.uid}` && (
+              <Button
+                size="large"
+                style={{ color: 'white' }}
+                onClick={() => history.push(`/dash/${user.uid}`)}
+              >
+                Go to App
+              </Button>
+            )}
+            <Button
+              size="large"
+              style={{ color: 'white' }}
+              onClick={() => onPressUserLogout()}
+            >
+              Logout
+            </Button>
+          </>
         ) : (
           <>
             <Button
