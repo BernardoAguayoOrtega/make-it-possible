@@ -15,6 +15,10 @@ export const Container = styled.div`
   ::-webkit-scrollbar-track {
     background: white; /* color of the tracking area */
   }
+
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
 `;
 export const GoalContainer = styled.div`
   background-color: white;

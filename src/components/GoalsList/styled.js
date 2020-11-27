@@ -8,6 +8,10 @@ export const Container = styled.div`
   overflow: auto;
   width: 30%;
 
+  @media (max-width: 1000px) {
+    width: 70%;
+  }
+
   ::-webkit-scrollbar {
     width: 1px; /* width of the entire scrollbar */
   }
