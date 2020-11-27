@@ -39,8 +39,10 @@ export default function Chart() {
   return (
     <div
       style={{
-        width: '400px',
-        height: '300px',
+        height: '200px',
+        padding: '1rem',
+        marginRight: '2rem',
+        width: '200px',
       }}
     >
       <C data={data} axes={axes} />

@@ -10,10 +10,8 @@ const UserDashboard = () => {
   return (
     <Container>
       <GoalsList />
-      <RightSide>
-        <GoalInfo />
-        <Chart />
-      </RightSide>
+      <GoalInfo />
+      <Chart />
     </Container>
   );
 };
