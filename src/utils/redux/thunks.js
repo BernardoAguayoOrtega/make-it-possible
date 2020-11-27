@@ -19,6 +19,8 @@ export const userLogin = (data) => async (dispatch) => {
     const user = await login(data);
 
     await dispatch(getUser(user));
+
+    return user;
   } catch (error) {
     alert(error);
   }
