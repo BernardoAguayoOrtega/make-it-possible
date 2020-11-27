@@ -9,6 +9,8 @@ export const setUserFromDataBase = (data) => async (dispatch) => {
     const user = await signup(data);
 
     dispatch(getUser(user));
+
+    return user;
   } catch (error) {
     alert(error);
   }

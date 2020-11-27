@@ -5,22 +5,28 @@ import { Button } from '@material-ui/core';
 import Loading from '../Loading/index.jsx';
 import { connect } from 'react-redux';
 import { setUserFromDataBase } from '../../utils/redux/thunks';
+import { useHistory } from 'react-router-dom';
 
 const SignUp = ({ setOpen, getUser }) => {
   const { register, handleSubmit, reset } = useForm();
   const [isLoading, setLoading] = useState(false);
+  const history = useHistory();
 
   const onSubmit = async (data) => {
     setLoading(true);
-    let newUser;
+    let user;
     try {
-      newUser = await getUser(data);
+      user = await getUser(data);
       setLoading(false);
       reset();
       await setOpen(false);
     } catch (error) {
       console.log(error);
     }
+
+    if (user) history.push(`/dash/${user.uid}`);
+
+    console.log(user);
   };
 
   return (

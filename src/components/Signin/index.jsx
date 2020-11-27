@@ -25,11 +25,7 @@ const Signin = ({ setOpen, getUser }) => {
       console.log(error);
     }
 
-    if (user) {
-      history.push(`/dash/${user.uid}`);
-    }
-
-    console.log(user);
+    if (user) history.push(`/dash/${user.uid}`);
   };
 
   return (
