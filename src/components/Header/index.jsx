@@ -11,6 +11,7 @@ import {
 import { Button, Typography } from '@material-ui/core';
 import Logo from '../Logo/index.jsx';
 import Modal from '../Modal/index.jsx';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUser } from '../../utils/redux/selectors';
 import { userLogout } from '../../utils/redux/thunks';
@@ -22,7 +23,9 @@ const Header = ({ user, onPressUserLogout }) => {
   return (
     <HeaderContainer>
       <LeftSide>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <Typography style={{ color: 'whitesmoke' }} variant="caption">
           Blog
         </Typography>
