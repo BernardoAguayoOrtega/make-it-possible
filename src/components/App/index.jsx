@@ -7,13 +7,14 @@ import Layout from '../Layout/index.jsx';
 import UserDashboard from '../../pages/UserDashboard/index.jsx';
 import '../../utils/firebase/firebase';
 import { Switch, Route } from 'react-router-dom';
+import PrivateRoute from '../../router/PrivateRoute.jsx';
 
 const App = () => {
   return (
     <Layout>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/dash/:id" component={UserDashboard} />
+        <PrivateRoute exact path="/dash/:id" component={UserDashboard} />
       </Switch>
     </Layout>
   );
