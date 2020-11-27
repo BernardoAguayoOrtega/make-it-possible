@@ -7,7 +7,17 @@ import Goal from '../Goal/index.jsx';
 const GoalList = () => {
   return (
     <Container>
-      <h2>Something</h2>
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
+      <Goal name="Some goal" date="00-00-00" />
       <Goal name="Some goal" date="00-00-00" />
     </Container>
   );
